@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+        /* .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+        .container{
+            margin: 10px 340px;
+              padding: 20px ;
+             border: 2px solid grey;
+             background-image: linear-gradient(to left bottom,#f9f2ed,#fcf5e6);
+          }
+       .heading{
+            text-align: center;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+             /* flex-wrap: wrap; */
+             padding: 5px;
+        }
+        .box1-1{
+            display: flex;
+            justify-content: space-between;
+            /* flex-wrap: wrap; */
+        }
+        .box2-1{
+            display: flex;
+            /* flex-wrap: wrap; */
+          }
+        .box2-1 h3{
+            margin-right: 15px;
+        }
+        .box1-1 input{
+            margin: 10px;
+            width: 150px;
+         }
+         .table1{
+            padding: 5px;
+            font-size: 16px;
+            overflow-x: scroll;
+           }
+         table,thead,th,tr,td{
+            border: 2px solid rgb(191, 191, 191);
+        }
+        td,th{
+            padding: 10px;
+        }
+         .gt{
+        text-align: center;
+       }
+       .b1{
+        display: flex;
+        justify-content: center;
+        }
+       button{
+         width: 200px;
+         height: 50px;
+         cursor: pointer;
+         font-size: 20px;
+         font-weight: 700;
+         border-radius: 10px;
+         background-color: #5db71d;
+         color: white;
+         margin: 30px;
+         }
+       td input{
+        width: 40px;
+        height: 30px;
+       }
+       .box4{
+        text-align: center;
+        font-size: larger;
+        font-weight: 800;
+       }
+       #total{
+        font-weight: 700;
+       }
+       h1{
+        text-align: center;
+       }
+       h1,h2{
+            font-size: 18px;
+        }
+        h3{
+            font-size: 16px;
+        }
+        h4{
+            font-weight: 100;
+            font-size: 14px;
+         }
+         .box3 input{
+            width: 150px;
+         }
+         .table2 table{
+            width: 910px;
+            /* width: 950px;
+            border: 2px solid red; */
+         }
+       @media only screen and (min-width:300px) and (max-width:950px){
+        .container{
+            margin: 5px;
+        }
+       
+        /* .table1{
+            padding: 2px;
+            overflow-x: scroll;
+           } */
+            .box3{
+                overflow-x: scroll;
+            }
+            .box{
+            flex-direction: column;
+        }
+        .box1-1{
+            flex-direction: column;
+        }
+        .box2-1{
+           flex-direction: column;
+          }
+          
+         }
+         @media only screen and (min-width:950px) and (max-width:1871px){
+            .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .container{
+            margin: 5px;
+          }
+            
+            }
+               
+    </style>
+</head>
+<body>
+<div class="main">
+<div class="container">
+    <div class="container1"> <h1>Marksheet</h1>
+      <div class="box3">
+          <table>
+              <thead>
+                  <tr>
+                      <th>CENTRE NO.</th>
+                      <th>SCHOOL NO.</th>
+                      <th>ENROLLMENT Number</th>
+                      <th>REGULAR</th>
+                      <th>ROLL NUMBER</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><input id="inp1" type="number"></td>
+                      <td><input id="inp2" type="number"></td>
+                      <td> <input id="inp8" type="text"></td>
+                      <td> <input id="inp9" type="text"></td>
+                      <td><input id="inp7" type="number"></td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <div class="box">
+    
+          <div class="box1">
+              <div class="box1-1">
+              <h3>Name</h3>
+              <input id="inp3" type="text"></div>
+              <div class="box1-1">
+              <h3>Father's Name</h3>
+              <input id="inp4" type="text"></div>
+              <div class="box1-1">
+              <h3>Mother's Name</h3>
+              <input id="inp10" type="text"></div>
+              <div class="box1-1">
+              <h3>Date of Birth</h3>
+              <input id="inp5" type="date"></div>
+              <div class="box1-1">
+              <h3>School/Centre</h3>
+              <input id="inp6" type="text"></div>
+          </div>
+       </div>
+   </div>
+  
+      <div class="table1">
+          <table>
+              <thead>
+                  <tr>
+                      <th rowspan="3">SUBJECT</th>
+                      <th colspan="3">MAXIMUM MARKS</th>
+                      <th colspan="2">MINIMUM MARKS</th>
+                      <th colspan="3">MARKS OBTAINED</th>
+                       </tr>
+                       <tr>
+                          <th rowspan="2">THRORY</th>
+                          <th >INTERNAL/</th>
+                           <th rowspan="2">TOTAL</th>
+                          <th rowspan="2">THEORY</th>
+                          <th rowspan="2">PRACTICAL</th>
+                          <th rowspan="2">THEORY</th>
+                          <th>INTERNAL/</th>
+                      </tr>
+                      <tr>
+                          <th>PRACTICAL</th>
+                          <th>PRACTICAL</th>
+                      </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>ENGLISH (SPECIAL)</td>
+                      <td>100</td>
+                      <td></td>
+                      <td>100</td>
+                      <td>033</td>
+                      <td></td>
+                      <td><input id="theory1" type="number" ></td>
+                      <td></td>
+                     </tr>
+                  <tr>
+                      <td>HINDI (GENERAL)</td>
+                      <td>100</td>
+                      <td></td>
+                      <td>100</td>
+                      <td>033</td>
+                      <td></td>
+                      <td><input id="theory2" type="number"></td>
+                      <td></td>
+                     </tr>
+                  <tr>
+                      <td>PHYSICS</td>
+                      <td>70</td>
+                      <td>030</td>
+                      <td>100</td>
+                      <td>033</td>
+                      <td>010</td>
+                      <td><input id="theory3" type="number"></td>
+                      <td><input id="p3" type="number"></td>
+                    </tr>
+                  <tr>
+                      <td>CHEMISTRY</td>
+                      <td>100</td>
+                      <td>030</td>
+                      <td>100</td>
+                      <td>023</td>
+                      <td>010</td>
+                      <td><input id="theory4" type="number"></td>
+                      <td><input id="p4" type="number"></td>
+                    </tr>
+                  <tr>
+                      <td>MATHEMATICS</td>
+                      <td>100</td>
+                      <td></td>
+                      <td>100</td>
+                      <td>33</td>
+                      <td></td>
+                      <td><input id="theory5" type="number"></td>
+                      <td></td>
+                    </tr>
+                  
+              </tbody>
+             </table>
+      </div>
+</div>
+</div>
+
+
+<div class="b1">
+    <button onclick="check()">Result</button>
+  </div>
+<div class="main">
+  <div class="container">
+  <hgroup class="heading">
+    <h1>BOARD OF SECONDARY EDUCATION, MADHYA PRADESH,BHOPAL</h1>
+    <h2>HIGH SCHOOL CERTIFICATE EXAMINATION(10+2)</h2>
+    <h2>MARKSHEET-CUM-CERTIFICATE</h2>
+    <h2>MAIN EXAM MARCH,2024</h2>
+</hgroup>
+ <div class="box">
+    <div class="box3 table2">
+        <table>
+            <thead>
+                <tr>
+                    <th>CENTRE NO.</th>
+                    <th>SCHOOL NO.</th>
+                    <th>ENROLLMENT Number</th>
+                    <th>REGULAR</th>
+                    <th>ROLL NUMBER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="inp1-1"></td>
+                    <td id="inp2-1"></td>
+                    <td id="inp8-1"></td>
+                    <td id="inp9-1"></td>
+                    <td id="inp7-1"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <div class="box">
+
+        <div class="box1">
+          
+             <div class="box2-1">
+            <h3>Name</h3>
+            <h4 id="inp3-1"></h4></div>
+            <div class="box2-1">
+            <h3>Father's Name</h3>
+            <h4 id="inp4-1"></h4></div>
+            <div class="box2-1">
+                <h3>Mother's Name</h3>
+                <h4 id="inp10-1"></h4></div>
+            <div class="box2-1">
+            <h3>Date of Birth</h3>
+            <h4 id="inp5-1" ></h4></div>
+            <div class="box2-1">
+            <h3>School/Centre</h3>
+            <h4 id="inp6-1"></h4></div>
+        </div>
+      </div>
+      
+   
+
+
+    <div class="table1">
+        <table>
+             <thead>
+                    <tr>
+                        <th rowspan="3">SUBJECT</th>
+                        <th colspan="3">MAXIMUM MARKS</th>
+                        <th colspan="2">MINIMUM MARKS</th>
+                        <th colspan="3">MARKS OBTAINED</th>
+                         </tr>
+                         <tr>
+                            <th rowspan="2">THRORY</th>
+                            <th >INTERNAL/</th>
+                             <th rowspan="2">TOTAL</th>
+                            <th rowspan="2">THEORY</th>
+                            <th rowspan="2">PRACTICAL</th>
+                            <th rowspan="2">THEORY</th>
+                            <th>INTERNAL/</th>
+                            <th rowspan="2">TOTAL</th>
+                        </tr>
+                        <tr>    
+                            <th>PRACTICAL</th>
+                            <th>PRACTICAL</th>
+                        </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td>ENGLISH (SPECIAL)</td>
+                    <td>100</td>
+                    <td></td>
+                    <td>100</td>
+                    <td>033</td>
+                    <td></td>
+                    <td id="theory1-1"></td>
+                    <td ></td>
+                    <td id="total1"></td>
+                </tr>
+                <tr>
+                    <td>HINDI (GENERAL)</td>
+                    <td>100</td>
+                    <td></td>
+                    <td>100</td>
+                    <td>033</td>
+                    <td></td>
+                    <td id="theory2-1"></td>
+                    <td></td>
+                    <td id="total2"></td>
+                </tr>
+                <tr>
+                    <td>PHYSICS</td>
+                    <td>100</td>
+                    <td>030</td>
+                    <td>100</td>
+                    <td>033</td>
+                    <td>010</td>
+                    <td id="theory3-1"></td>
+                    <td id="p3-1"></td>
+                    <td id="total3"></td>
+                </tr>
+                <tr>
+                    <td>CHEMISTRY</td>
+                    <td>100</td>
+                    <td>030</td>
+                    <td>100</td>
+                    <td>033</td>
+                    <td>010</td>
+                    <td id="theory4-1"></td>
+                    <td id="p4-1"></td>
+                    <td id="total4"></td>
+                </tr>
+                <tr>
+                    <td>MATHEMATICS</td>
+                    <td>100</td>
+                    <td></td>
+                    <td>100</td>
+                    <td>033</td>
+                    <td></td>
+                    <td id="theory5-1"></td>
+                    <td></td>
+                    <td id="total5"></td>
+                </tr>
+               
+            </tbody>
+            <tfoot>
+               
+                <td class="gt" colspan="2">500</td>
+                <td class="gt" colspan="6">GRAND TOTAL</td>
+                <td id="total"></td>
+            </tfoot>
+        </table>
+    </div>
+    <div class="box4">
+        <p>Result : <span id="result1"></span> </p>
+        <p>Percentage : <span id="percentage"></span></p>
+        <p>Grade :<span id="grade"></span></p> 
+        
+    </div>
+    </div>
+    
+</div>
+
+   
+
+<script>
+    
+    function check(){
+        let inp1 = document.getElementById('inp1').value;
+        let inp2 = document.getElementById('inp2').value;
+        let inp3 = document.getElementById('inp3').value;
+        let inp4 = document.getElementById('inp4').value;
+        let inp5 = document.getElementById('inp5').value;
+        let inp6 = document.getElementById('inp6').value;
+        let inp7 = document.getElementById('inp7').value;
+        let inp8 = document.getElementById('inp8').value;
+        let inp9 = document.getElementById('inp9').value;
+        let inp10 = document.getElementById('inp10').value;
+
+         let inp1_1 = document.getElementById('inp1-1');
+         inp1_1.innerText = inp1;
+        let inp2_1 = document.getElementById('inp2-1');
+        inp2_1.innerText = inp2;
+        let inp3_1 = document.getElementById('inp3-1');
+        inp3_1.innerText = inp3;
+        let inp4_1 = document.getElementById('inp4-1');
+        inp4_1.innerText = inp4;
+        let inp5_1 = document.getElementById('inp5-1');
+        inp5_1.innerText = inp5;
+        let inp6_1 = document.getElementById('inp6-1');
+        inp6_1.innerText = inp6;
+        let inp7_1 = document.getElementById('inp7-1');
+        inp7_1.innerText = inp7;
+        let inp8_1 = document.getElementById('inp8-1');
+        inp8_1.innerText = inp8;
+        let inp9_1 = document.getElementById('inp9-1');
+        inp9_1.innerText = inp9;
+        let inp10_1 = document.getElementById('inp10-1');
+        inp10_1.innerText = inp10;
+
+         let n1 = parseInt(document.getElementById('theory1').value);
+        let n2 = parseInt(document.getElementById('theory2').value);
+        let n3 = parseInt(document.getElementById('theory3').value);
+        let n4 = parseInt(document.getElementById('theory4').value);
+        let n5 = parseInt(document.getElementById('theory5').value);
+        
+        let th1 = document.getElementById('theory1-1');
+        th1.innerText = n1;
+        let th2 = document.getElementById('theory2-1');
+        th2.innerText=n2;
+        let th3 = document.getElementById('theory3-1');
+        th3.innerText = n3;
+        let th4 = document.getElementById('theory4-1');
+        th4.innerText=n4;
+        let th5 = document.getElementById('theory5-1');
+        th5.innerText = n5;
+    
+        let a3 = parseInt(document.getElementById('p3').value);
+        let a4 = parseInt(document.getElementById('p4').value);
+        
+        let p3 = document.getElementById('p3-1');
+        p3.innerText = a3;
+        let p4 = document.getElementById('p4-1');
+        p4.innerText = a4;
+       
+         let total1 = n1;
+        let t1 = document.getElementById('total1');
+        t1.innerHTML = total1;
+
+        let total2 = n2 ;
+        let t2 = document.getElementById('total2');
+        t2.innerHTML = total2;
+
+        let total3 = n3 + a3;
+        let t3 = document.getElementById('total3');
+        t3.innerHTML = total3;
+
+        let total4 = n4 + a4;
+        let t4 = document.getElementById('total4');
+        t4.innerHTML = total4;
+
+        let total5 = n5 ;
+        let t5 = document.getElementById('total5');
+        t5.innerHTML = total5;
+
+         let total = total1 + total2 + total3 + total4 + total5 ;
+        let result = document.getElementById('total');
+        result.innerHTML = total;
+        
+
+        var result1 = document.getElementById('result1');
+
+         if(n1>100 || n2>100 || n3>70 || n4>70 || n5>100 ||  a3>30 || a4>30 ){
+            result1.innerHTML = 'invalid';
+            result1.style.color='green';
+          }
+         else if(n1>32 && n2>32 && n3>22 && n4>22 && n5>32 &&  a3>9 && a4>9){
+            result1.innerHTML = 'Pass';
+            result1.style.color='black';
+         }
+          else{
+            result1.innerHTML = 'Fail';
+            result1.style.color='red';
+         }
+
+         let percentage1 = (total * 100)/500;
+         percentage1 = Number(percentage1.toFixed(2));
+         let percentage = document.getElementById('percentage');
+
+         if(percentage1>0 && percentage1<=100){
+            percentage.innerHTML = percentage1 + "%";
+            percentage.style.color = 'black';
+          }
+          else{
+            percentage.innerHTML ='invalid';
+            percentage.style.color = 'green';
+          }
+        
+        
+         let grade = document.getElementById('grade');
+        if(percentage1>=80 && percentage1<=100){
+            grade.innerHTML = 'A';
+            grade.style.color = 'black';
+         }
+         else if(percentage1>=60 && percentage1<80){
+            grade.innerHTML = 'B';
+            grade.style.color = 'black';
+         }
+         else if(percentage1>=40 && percentage1<60){
+            grade.innerHTML = 'C';
+            grade.style.color = 'black';
+         }
+         else if(percentage1>=20 && percentage1<40){
+            grade.innerHTML = 'D';
+            grade.style.color = 'black';
+         }
+         else if(percentage1>=0 && percentage1<20){
+            grade.innerHTML = 'F';
+            grade.style.color = 'black';
+         }
+         else {
+            grade.innerHTML = 'invalid';
+            grade.style.color = 'green';
+         }
+         
+ }
+</script>
+
+</body>
+</html>
